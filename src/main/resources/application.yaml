@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+      rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+        queue:
+          name:
+            consumer: ConsumerServiceQueue
+            another: AnotherServiceQueue
+        exchange:
+          name: ConsumerExchange
+
+application:
+  cbrf:
+    url: https://iss.moex.com/iss/statistics/engines/currency/markets/selt/rates.json?iss.meta=off
